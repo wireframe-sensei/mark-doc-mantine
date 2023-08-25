@@ -11,8 +11,7 @@ export function Callout({ title, children }) {
             display: flex;
             flex-direction: column;
             padding: 12px 16px;
-            background: #f6f9fc;
-            border: 1px solid #dce6e9;
+            background: #141517;
             border-radius: 4px;
           }
           .callout :global(p) {
