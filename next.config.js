@@ -3,7 +3,7 @@ const withMarkdoc = require('@markdoc/next.js');
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = './'
-let basePath = '/'
+let basePath = '/out'
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
@@ -14,7 +14,8 @@ if (isGithubActions) {
 
 module.exports =
   withMarkdoc(/* config: https://markdoc.io/docs/nextjs#options */)({
-    assetPrefix: './',
+    basePath,
+    assetPrefix,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdoc'],
     trailingSlash: true,
   });
