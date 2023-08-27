@@ -14,7 +14,7 @@ if (isGithubActions) {
 
 module.exports =
   withMarkdoc(/* config: https://markdoc.io/docs/nextjs#options */)({
-    assetPrefix,
+    assetPrefix: './,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdoc'],
     trailingSlash: true,
   });
